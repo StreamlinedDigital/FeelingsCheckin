@@ -4,7 +4,8 @@ import Coffee from 'react-icons/lib/ti/coffee'
 import RaisedButton from 'material-ui/RaisedButton'
 
 const P = styled.p`
-  color: #b9b9b9;
+  ${/* color: #b9b9b9; */ ''}
+  color: rgb(0, 188, 212)
   text-align: center;
   font-size: 15px;
   font-weight: 300;
