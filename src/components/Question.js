@@ -12,6 +12,9 @@ const QuestionWrapper = styled.div`
   padding: 5%;
 
 `
+const QuestionHeader = styled.h1`
+  color: #5f5f5f
+`
 
 class Question extends React.Component {
   constructor(props) {
@@ -35,7 +38,7 @@ class Question extends React.Component {
     return (
       <QuestionWrapper>
         <LinearProgress mode="determinate" value={progress} />
-        <h1>{this.props.title}</h1>
+        <QuestionHeader>{this.props.title}</QuestionHeader>
 
         <Form
           handleSubmit={this.handleOnSubmit}
