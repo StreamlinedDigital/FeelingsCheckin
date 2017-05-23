@@ -30,7 +30,7 @@ class Header extends React.Component {
         <P>Feelings Check-In <Coffee /></P>
         {displayName
           ? <Account>
-              <P>Hello, {displayName}</P>
+              <P>Hello, {displayName[0]}</P>
               <RaisedButton
                 label="Sign Out"
                 onClick={this.props.handleSignOut}
