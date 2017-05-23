@@ -13,13 +13,23 @@ const Select = styled.select`
 `
 
 class Form extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      selectValue: ''
+    }
+    this.handleChange = this.handleChange.bind(this)
+  }
+  handleChange(e) {
+    this.setState({ selectValue: e.target.value })
+  }
   render() {
-    const { options } = this.props
+    const { options, handleFormSubmit, feeling } = this.props
+    const { selectValue } = this.state
     return (
       <div>
-        <form onSubmit={this.props.handleSubmit}>
-
-          <Select required ref="emotionally">
+        <form onSubmit={e => handleFormSubmit(e, selectValue, feeling)}>
+          <Select required value={selectValue} onChange={this.handleChange}>
             <option value="" disabled selected>
               Please select an emotion
             </option>

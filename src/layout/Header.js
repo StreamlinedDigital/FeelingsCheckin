@@ -4,8 +4,7 @@ import Coffee from 'react-icons/lib/ti/coffee'
 import RaisedButton from 'material-ui/RaisedButton'
 
 const P = styled.p`
-  ${/* color: #b9b9b9; */ ''}
-  color: rgb(0, 188, 212)
+  color: #b9b9b9;
   text-align: center;
   font-size: 15px;
   font-weight: 300;
@@ -31,7 +30,7 @@ class Header extends React.Component {
         <P>Feelings Check-In <Coffee /></P>
         {displayName
           ? <Account>
-              <P>Hello, {displayName}</P>
+              <P>Hello, {displayName[0]}</P>
               <RaisedButton
                 label="Sign Out"
                 onClick={this.props.handleSignOut}
